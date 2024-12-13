@@ -51,6 +51,8 @@
 - (void)requestAuthorizationWithCompletion:(void (^)(void))completion;
 - (BOOL)isPHAuthorizationStatusLimited;
 
+- (void)configAssetGridThumbnailSize;
+
 /// Get Album 获得相册/相册数组
 - (void)getCameraRollAlbumWithFetchAssets:(BOOL)needFetchAssets completion:(void (^)(TZAlbumModel *model))completion;
 - (void)getCameraRollAlbum:(BOOL)allowPickingVideo allowPickingImage:(BOOL)allowPickingImage needFetchAssets:(BOOL)needFetchAssets completion:(void (^)(TZAlbumModel *model))completion __attribute__((deprecated("Use -getCameraRollAlbumWithFetchAssets:completion:. You can config allowPickingImage、allowPickingVideo by TZImagePickerConfig")));

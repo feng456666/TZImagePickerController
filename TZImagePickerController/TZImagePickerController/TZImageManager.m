@@ -55,6 +55,12 @@ static dispatch_once_t onceToken;
     AssetGridThumbnailSize = CGSizeMake(itemWH * TZScreenScale, itemWH * TZScreenScale);
 }
 
+- (void)configAssetGridThumbnailSize{
+    [self configTZScreenWidth];
+    CGFloat itemWH = TZScreenWidth/4;
+    AssetGridThumbnailSize = CGSizeMake(itemWH * TZScreenScale, itemWH * TZScreenScale);
+}
+
 - (void)configTZScreenWidth {
     TZScreenWidth = [UIScreen mainScreen].bounds.size.width;
     // 测试发现，如果scale在plus真机上取到3.0，内存会增大特别多。故这里写死成2.0
